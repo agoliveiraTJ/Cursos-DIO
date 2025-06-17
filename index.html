@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Anderson Guedes de Oliveira</title>
+
+    <!-- Inline CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: url('https://images.unsplash.com/photo-1517436070-4c9b8c1c5f26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center; /* Nova imagem de fundo */
+            background-size: cover; /* Faz a imagem cobrir todo o cabeçalho */
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .profile-photo {
+            width: 120px; /* Tamanho da foto */
+            height: 120px; /* Tamanho da foto */
+            border-radius: 50%; /* Formato circular */
+            overflow: hidden;
+            margin: 0 auto 10px; /* Centraliza a imagem */
+            border: 4px solid #fff; /* Borda branca */
+            box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Sombra da imagem */
+        }
+        .profile-photo img {
+            width: 100%; /* Ajusta a imagem ao tamanho do espaço */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #fff; /* Cor dos links no cabeçalho */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        section:hover {
+            transform: scale(1.02); /* Efeito de hover */
+        }
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+        .contact-info {
+            margin: 10px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 10px 0;
+            background: #0056b3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #003d80; /* Efeito de hover */
+        }
+        .skills, .courses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .skill, .course {
+            background: #e9ecef;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            flex: 1 1 30%;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        .skill:hover, .course:hover {
+            background: #d6d9db; /* Efeito de hover */
+        }
+        .skill img {
+            width: 50px; /* Tamanho do ícone */
+            height: 50px; /* Tamanho do ícone */
+            vertical-align: middle; /* Alinha o ícone com o texto */
+            margin: 0 auto; /* Centraliza o ícone */
+            display: block; /* Faz o ícone ser tratado como bloco */
+        }
+        .skill span {
+            display: block; /* Faz o texto ser tratado como bloco */
+            font-size: 1.2em; /* Aumenta o tamanho da fonte */
+            margin-top: 5px; /* Espaço entre o ícone e o texto */
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #0056b3;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-box {
+            background-color: #003d80; /* Cor da caixa azul */
+            height: 50px; /* Altura da caixa */
+            margin-top: 10px; /* Espaço acima da caixa */
+        }
+        .social-box {
+            margin: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .social-box h2 {
+            margin-bottom: 15px;
+        }
+        .social-box a {
+            display: block;
+            margin: 5px 0;
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .social-box img {
+            width: 30px; /* Tamanho do ícone das redes sociais */
+            height: 30px; /* Tamanho do ícone das redes sociais */
+            vertical-align: middle; /* Alinha o ícone com o texto */
+            margin-right: 5px; /* Espaço entre o ícone e o texto */
+        }
+        .flag {
+            width: 20px; /* Tamanho da bandeira */
+            height: 15px; /* Tamanho da bandeira */
+            vertical-align: middle; /* Alinha a bandeira com o texto */
+            margin-right: 5px; /* Espaço entre a bandeira e o texto */
+        }
+        @media (max-width: 600px) {
+            .skills, .courses {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="profile-photo">
+        <img src="URL_DA_FOTO_AQUI" alt="Foto profissional de Anderson Guedes de Oliveira">
+    </div>
+    <h1>Anderson Guedes de Oliveira</h1>
+    <nav>
+        <a href="#resumo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Document_icon.svg" alt="Resumo" class="social-icon"> Resumo Profissional</a>
+        <a href="#formacao"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Graduation_cap_icon.svg" alt="Formação" class="social-icon"> Formação</a>
+        <a href="#experiencia"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Briefcase_icon.svg" alt="Experiência" class="social-icon"> Experiência</a>
+        <a href="#projetos"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Project_icon.svg" alt="Projetos" class="social-icon"> Projetos</a>
+        <a href="#contato"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Contact_icon.svg" alt="Contato" class="social-icon"> Contato</a>
+    </nav>
+</header>
+
+<section id="resumo">
+    <h2><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Document_icon.svg" alt="Resumo" class="social-icon" style="width: 30px; height: 30px;"> Resumo Profissional</h2>
+    <p>Profissional com mais de 20 anos de experiência em Tecnologia da Informação, com foco em desenvolvimento web, administração de plataformas EAD (Moodle), análise de sistemas e transformação digital no setor público. Pós-graduando em Ciência de Dados e Inteligência Artificial. Amplos conhecimentos em HTML5, CSS3, Javascript, Python, ASP, MySQL, Power BI, LGPD. Possui alguns conhecimentos em PHP, Scrum, Azure e AWS.</p>
+</section>
+
+<section id="formacao">
+    <h2><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Graduation_cap_icon.svg" alt="Formação" class="social-icon" style="width: 30px; height: 30px;"> Formação Acadêmica</h2>
+    <ul>
+        <li>Pós-Graduação em Ciência de Dados e Inteligência Artificial – Universidade Pitágoras Unopar Anhanguera – Mai/2025</li>
+        <li>Tecnólogo em Processamento de Dados – FACHA – 2003</li>
+    </ul>
+</section>
+
+<section id="experiencia">
+    <h2><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Briefcase_icon.svg" alt="Experiência" class="social-icon" style="width: 30px; height: 30px;"> Experiência Profissional</h2>
+    <h3>EMERJ - Escola da Magistratura do Estado do Rio de Janeiro (04/2000 – atual)</h3>
+    <p>Administrador e Analista de Sistemas. Destaques:</p>
+    <ul>
+        <li>Assessor de TI no Departamento de Aperfeiçoamento de Magistrados</li>
+        <li>Idealizador do App Web Magistrados: aplicativo com acesso a cursos, legislação, biblioteca, ambiente virtual</li>
+        <li>Administração do Sistema de Controle Acadêmico dos Magistrados</li>
+        <li>Desenvolvimento de sistemas web (Python)</li>
+        <li>Gestão de cursos EaD no Moodle (Montagem, configuração e administração)</li>
+    </ul>
+    <h3>PGM - Procuradoria Geral do Município do Rio de Janeiro (11/2001 – 12/2003)</h3>
+    <p>Estagiário de Webmaster. Destaques:</p>
+    <ul>
+        <li>Desenvolvimento de sites usando ASP e SQL</li>
+        <li>Manutenção e atualização da intranet e internet institucional</li>
+    </ul>
+</section>
+
+<section>
+    <h2><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Project_icon.svg" alt="Cursos" class="social-icon" style="width: 30px; height: 30px;"> Cursos Técnicos Recentes</h2>
+    <ul>
+        <li>Python 3 do básico ao avançado – UDEMY – Em andamento</li>
+        <li>Desenvolvimento Web Completo (HTML5, CSS3, JS, PHP, MySQL, etc.) – UDEMY – Em andamento</li>
+        <li>Power BI – Ka Solution – 2023</li>
+        <li>Scrum Overview – Ka Solution – 2023</li>
+        <li>Microsoft Azure Fundamentals (AZ-900) – Ka Solution – 2023</li>
+        <li>Microsoft 365 Fundamentals (MS-900) – Ka Solution – 2023</li>
+        <li>Computação em Nuvem – AWS Discovery Day – 2023</li>
+        <li>LGPD: Bases e Processos – EVG – 2023</li>
+        <li>SEI! USAR – EVG – 2023</li>
+        <li>H5P para Moodle – UTFPR – 2023</li>
+        <li>Formação de Formadores – ENFAM/EMERJ – 2023</li>
+    </ul>
+</section>
+
+<section>
+    <h2><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Moodle_logo.svg" alt="Habilidades" class="social-icon" style="width: 30px; height: 30px;"> Habilidades Técnicas</h2>
+    <div class="skills">
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+            <span>Python (iniciante)</span>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
+            <span>PHP</span>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/ASP.NET_Logo.svg" alt="ASP">
+            <span>ASP</span>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+            <span>HTML</span>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo_and_wordmark.svg" alt="CSS">
+            <span>CSS</span>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+            <span>Javascript</span>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/MySQL_logo.svg" alt="SQL">
+            <span>SQL</span>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Moodle_logo.svg" alt="Moodle">
+            <span>Moodle</span>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Power_BI_Logo.png" alt="Power BI">
+            <span>Power BI</span>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Git-Icon-1788C.png" alt="Git">
+            <span>Git</span>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Visual_Studio_Logo.svg" alt="Visual Studio">
+            <span>Visual Studio</span>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Corel_Draw_Logo.svg" alt="Corel Draw">
+            <span>Corel Draw</span>
+        </div>
+        <div class="skill">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Adobe_Creative_Cloud_logo.svg" alt="Adobe Suite">
+            <span>Adobe Suite</span>
+        </div>
+    </div>
+</section>
+
+<section id="idiomas">
+    <h2><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Globe_icon.svg" alt="Idiomas" class="social-icon" style="width: 30px; height: 30px;"> Idiomas</h2>
+    <ul>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="Bandeira Americana" class="flag"> Inglês – Nível Intermediário</li>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="Bandeira da Espanha" class="flag"> Espanhol – Nível Básico</li>
+    </ul>
+</section>
+
+<section class="social-box">
+    <h2><img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Computer_icon.svg" alt="Minhas Redes" class="social-icon" style="width: 30px; height: 30px;"> Minhas Redes</h2>
+    <a href="https://www.linkedin.com/in/anderson-oliveira-b6304753/?trk=li_LOL_DA_global_careers_jobsgtm_otwPE_res_May2025_dav4" target="_blank">
+        LinkedIn
+    </a>
+    <a href="https://github.com/agoliveiraTJ" target="_blank">
+        GitHub
+    </a>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <div class="contact-info">
+        <p>Email: <a href="mailto:agoliveira@gmail.com">agoliveira@gmail.com</a></p>
+    </div>
+    <a href="#" class="button">Baixar Currículo</a>
+    <a href="mailto:agoliveira@gmail.com" class="button">Entrar em Contato</a>
+</section>
+
+<footer>
+    <div class="footer-box"></div> <!-- Caixa azul vazia no rodapé -->
+</footer>
+
+</body>
+</html>
