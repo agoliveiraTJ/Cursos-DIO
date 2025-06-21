@@ -14,3 +14,8 @@ git push -u origin main
 
 Link com os Fundamentos do Github
 https://aline-antunes.gitbook.io/formacao-fundamentos-github
+
+
+Varias listas de Git Stats
+https://github.com/anuraghazra/github-readme-stats/blob/master/docs/readme_pt-BR.md
+
